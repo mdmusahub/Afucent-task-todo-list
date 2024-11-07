@@ -68,7 +68,7 @@ class LoginView(APIView):
                     return Response({
                         'refresh': str(refresh),
                         'access': str(access_token),
-                        # 'user': custom_claims
+                         
                     }) 
                 except Exception as e:
                     return Response({"error": f"Error during authentication: {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)  
